@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var AFFIX_TOP_LIMIT = 300;
     var AFFIX_OFFSET = 49;
-	$('#menu-left').localScroll({hash:true, onAfterFirst:function(){$('html, body').scrollTo( {top:'-=25px'}, 'fast' );}});
+	$('#menu-left').localScroll({hash:true, onAfterFirst:function(){$('html, body').scrollTo( {top:'-=25px'}, 'ultra fast' );}});
     var $menu = $("#menu"),
 		$btn = $("#menu-toggle");
 
