@@ -38,24 +38,21 @@
     <ul class="docs-nav" id="menu-left">
       <li><strong>Начало</strong></li>
       <li><a href="#welcome" class=" ">Предисловие</a></li>
-      <li><a href="#benefits" class=" ">Требования</a></li>
-      <li><a href="#features" class=" ">Установка</a></li>
-      <li><a href="#license" class=" ">Использование IDE</a></li>
-      <li><a href="#license" class=" ">PHP Storm</a></li>
+      <li><a href="#requirements" class=" ">Требования</a></li>
+      <li><a href="#install" class=" ">Установка</a></li>
+      <li><a href="#ide" class=" ">Использование IDE</a></li>
+      <li><a href="#phpstorm" class=" ">PHP Storm</a></li>
       <li class="separator"></li>
       <li><strong>Код</strong></li>
-      <li><a href="#view_type" class=" ">Руководство по написанию кода</a></li>
-      <li><a href="#animation_style" class=" ">Animation Styles</a></li>
-      <li><a href="#bars_text" class=" ">Bars Text</a></li>
-      <li><a href="#vote_counter" class=" ">Vote Counter</a></li>
-      <li><a href="#rating_icons" class=" ">Rating Icons</a></li>
-      <li><a href="#rating_titles" class=" ">Rating Titles</a></li>
-      <li><a href="#bar_colors" class=" ">Bar Colors</a></li>
+      <li><a href="#view_type" class=" ">Стандарты</a></li>
+      <li><a href="#bitrixst" class=" ">Стандарты Битрикс</a></li>
+      <li><a href="#psr" class=" ">PSR</a></li>
     </ul>
     <div class="docs-content">
       <h2>Добро пожаловать</h2>
-      <h3 id="welcome"> Welcome</h3>
-      <p>В интернете очень много устаревшей информации, которая приводит к заблуждению, распространению неверных решений и написанию плохого кода у начинающих PHP-разработчиков. Это нужно остановить. PHP: Правильный Путь — легкочитаемое руководство для быстрого ознакомления с правилами эффективного использования PHP, принятыми стандартами написания кода и ссылками на признанные руководства по всему интернету.</p>
+      <h3 id="welcome">Предисловие</h3>
+      <p>На этой странице не ставится цель повторить информацию из курсов Битрикса, доступных в свободном доступе. Здесь мы ставим цель собрать и объединить всю, необходимую информацию, направить и указать правильный путь при разработке сайтов на 1С-Битрикс.
+	  </p>
       <p>Для начала, нужно ознакомиться с документацией:</p>
       <ul>
         <li><a href="http://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=34">Контент-менеджер</a></li>
@@ -65,214 +62,191 @@
         <li><a href="http://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43">Разработчик Bitrix Framework</a></li>
         <li><a href="http://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=32">Курс для хостеров </a></li>
       </ul>
-      <p> Opineo allows you to do all of this and much more without signing up for an account
-        or hire an expert. This DIY tool enables you to listen to your customers’ voice
-        easily and instantly. All you have to do is go online, design your widget and place
-        it on your website. </p>
-      <h3 id="benefits"> Benefits</h3>
-      <ul>
-        <li>Use Opineo to conduct pre-release surveys before launching new products or services</li>
-        <li>Analyze new trends in the industry</li>
-        <li>Run crowd-sourced campaigns with Opineo to mature new ideas, website designs or
-          logos</li>
-        <li>Conduct popularity surveys with free Opineo widget</li>
-        <li>Create and host polling surveys with Opineo</li>
-      </ul>
-      <h3 id="features"> Features</h3>
-      <ul>
-        <li>Facility to customize to match your website theme</li>
-        <li>Detailed and Compact view options</li>
-        <li>Comprehensive options to customize animation, colors, orientation and style</li>
-        <li>All the power and flexibility of jQuery</li>
-        <li>Easy install; 100% integration</li>
-        <li>Facility to customize rating icons</li>
-      </ul>
-      <h3 id="license"> License</h3>
-      <p> This Feedback Collection and Polling widget is free for personal and commercial
-        projects as long as you are providing a link back to this page. If you don’t want
-        to provide a link back, simply contribute to the development and improvement of
-        this tool. To contribute to this and many other interesting projects, go to Support
-        Efforts and become a patron.</p>
+	  
+	  <p>В случае возникновения вопросов, ответы зачастую можно найти на <a href="http://dev.1c-bitrix.ru/community/forums/">официальном форуме Битрикса</a>, там же можно задать вопрос, на который ответ найден не был.</p>
+
+      <h3 id="requirements"> Требования</h3>
+	  <p>На данный момент технические требования продукта:</p>
+	  <ul> 
+		<li><a href="http://www.php.net/">PHP</a> 5.3 и выше </li>
+		<li><a href="http://www.apache.org/">Apache</a> 1.3 и выше или <a href="http://www.microsoft.com/iis/">MS IIS</a> 6.0<strong></strong> и выше </li>
+		<li><a href="http://www.mysql.com/">MySQL</a> 5.0 и выше&nbsp;<span style="color: rgb(255, 0, 0);"></span> </li>
+	  </ul>
+
+      <h3 id="install"> Установка</h3>
+	  <p>Устанавливать продукт необходимо только в кодировке UTF-8, для этого при установке есть специальный чекбокс. Чтобы можно было установить Битрикс в этой кодировке, на сервере обязательно должна быть возможность установки параметров:</p>
+      <pre class="prettyprint">
+	php_value mbstring.func_overload 2
+	php_value mbstring.internal_encoding UTF-8
+	  </pre>
+	  <p>Это очень важный момент и перед покупкой хостинга, убедитесь что данные параметры вы сможете установить или это сможет сделать техподдержка.</p>
+	  <p>Так же стоит отметить, что раньше сменить параметры можно было в .htaccess, но с версии php 5.3 (которая теперь минимальна для Битрикса), данные параметры менять в этом файле нельзя.</p>
+	  
+      <h3 id="ide"> Использование IDE</h3>
+      <p>Прошло то время, когда для написания или изменения пары строк кода быстрее было запустить быстрый текстовый редактор, нежели крупную IDE. В мире давно есть больше намного удобных вещей, чем notepad++ и filezilla.</p>
+	  <p>Приведем список самый популярных IDE, которые действительно могут называться "Интегрированной Средой Разработки".</p>
+	  <h4> Бесплатные:</h4>
+	  <ul> 
+		<li><a href="http://www.aptana.com/">Aptana Studio </a></li>
+		<li><a href="http://eclipse.org/">Eclipse</a></li>
+		<li><a href="https://netbeans.org/">Netbeans</a></li>
+	  </ul>
+	  <h4> Платные:</h4>
+	  <ul> 
+		<li><a href="http://www.jetbrains.com/phpstorm/">Php Storm</a></li>
+	  </ul>
+	  <h3 id="phpstorm"> PHP Storm</h3>
+      <p>Почему именно он? Для более быстрой&nbsp;разработки проектов решил перейти на IDE&nbsp;<a href="http://www.jetbrains.com/phpstorm/">phpstorm</a>, ранее использовал notepad++, как и большинство разработчиков под битрикс. Оказывается зря, phpstorm позволяет автоматизировать такие рутинные действия как:</p>
+	<ol>
+		<li>Расстановка корректной лесенки для кода</li>
+		<li>Расстановка пробелов до и после { в функциях и css ( З.Ы. да, это уже болезнь :) )</li>
+		<li>Подстановка компонентов битрикса</li>
+		<li>API битрикса в IDE не залезая на сайт</li>
+		<li>Автоподстановка API</li>
+		<li>ГИТ интеграция.</li>
+		<li>И многое-многое другое.</li>
+	</ol>
+	<p>И так, для интеграции phpstorm в проект потребуется следующее:</p>
+	<ol>
+		<li>Создаем новый проект, жамкая клавишу «Create new project from Existing Files»</li>
+		<li>Выбираем, где располагается проект. Выбираем из 2, 3, 4 пунктов, ни в коем случае не в папке проекта, потому что, иначе, папки bitrix и upload будут индексироваться phpstorm и он будет ужасно тормозить.</li>
+		<li>Задаем название проекта и путь к локальной копии.</li>
+		<li>Указываем кастомные настройки (Custom)</li>
+		<li>Изменяем настройку синхронизации файлов с проектом (<span style="color: #000000;">Upload changed files automatically to the default server</span>) на «Always» и подтверждение изменения файлов, если работают несколько разработчиков над одним проектом (<span style="color: #000000;">warn when uploading over newer file</span>) на&nbsp;<span style="color: #000000;">Compare content и указываем галочку оповещения об этом&nbsp;Notify about remote changes.</span></li>
+		<li>Настраиваем параметры соединения с удаленным сервером, желательно выбираем путь до корня где лежит проект уже здесь.</li>
+		<li>Выбираем папку корня проекта жамкнув клавишу «Project root», обязательно исключаем на данном шаге все вложенные папки из скачиваемых, чтобы они все стали безцветными, жамкая «Excluded from download».</li>
+		<li>Все, проект создался, далее приступаем к настройкам.</li>
+		<li>Открываем настройки удаленного соединения, File — Settings — Deployment, во вкладке Excluded paths удаляем все локальные папки из исключения (желтенькая папочка), сохраняем</li>
+		<li>Справа жамкаем клавишу Remote Hosts, удаляем папки bitrix и upload из скачивания, если используется битрикс ниже 12.5 то добавляем папки /bitrix/templates/, /bitrix/components/*custom*/, /bitrix/php_interface/, при их выборе будут выбраны все вышележащие папки, необходимо будет вручную удалить все остальные файлы, иначе просто выбираем папку /local/.</li>
+		<li>Нажимаем правой клавишей на папку корня проекта и жамкаем «Download from here».</li>
+		<li>Проект готов к работе.</li>
+	</ol>
+	
+	
+<p>Далее фичи IDE.</p>
+<p><strong>Настройка коде стайл.</strong></p>
+<p>Вкратце он настраивается через File — Settings — Code Style, мой готовый профиль можно взять <a href="https://gist.github.com/veksa/11208864">здесь</a></p>
+<p><strong>Настройка сниппетов.</strong></p>
+<p>Скачиваем <a href="https://github.com/matiaspub/bxCompSnpt">отсюда</a>&nbsp;и копируем файлик phpstorm.xml в папку&nbsp;&lt;User home&gt;\.WebIdeXX\config\templates.</p>
+<p>Позволяет использовать автодополнение на компонентах со всеми настройками.</p>
+<p><strong>API Bitrix’а.</strong></p>
+<p>Скачиваем <a href="https://github.com/matiaspub/bxApiDocs">отсюда</a>, копируем папку modules куда угодно, желательно рядом с локальными проектами для удобства. Далее идем&nbsp;File — Settings — Project Settings — PHP и в&nbsp;Include Path добавляем путь к папке modules.</p>
+<p><strong>Автопереход по файлам в коде.</strong></p>
+<p>Скачиваем <a href="https://github.com/salerman/bitrixstorm">отсюда</a>, идем в папку, куда установлен phpstorm, далее plugins, создаем папку&nbsp;phpstorm-bitrix-plugin, в ней папку lib и копируем в нее файлики phpstorm-bitrix-plugin.jar и phpstorm-bitrix-plugin.iml.</p>
+<p><strong>Автообновление страницы.</strong></p>
+<p>Скачиваем <a href="http://blog.jetbrains.com/webide/2012/08/liveedit-plugin-features-in-detail/#more-4098">отсюда</a>, пока не разобрался.</p>
+<p><strong>Интеграция с битбакетом.</strong></p>
+<p>Скачиваем <a href="https://bitbucket.org/atlassian/jetbrains-bitbucket-connector/overview">отсюда</a>, пока не разобрался с возможностью синхронизации данных на готовом проекте и наличии на нем гита.</p>
+<p><strong>Отладка.</strong></p>
+<p>http://habrahabr.ru/post/209024/</p>
+
       <hr>
-      <h2> Customizing Opineo</h2>
-      <p> Before you make any cusomization or even start using Opineo create a 'div' element
-        and assign it some id. Now add references to necessary Javascrip files e.g.</p>
-      <ul>
-        <li>A reference to latest jQuery library </li>
-        <li>A reference to Opineo script file sudo nano opineo.js</li>
-      </ul>
-      <p> The following customization options are available in Opineo:</p>
-      <h3 id="view_type"> View Type</h3>
-      <ul>
-        <li>Detailed View</li>
-      </ul>
-     
-      <pre class="prettyprint">&lt;script&gt;
-      	$(document).ready(function (){
-        $('#DefaultOptions').opineo('results.php', {curvalue:3,
-            view: 'detailed',
-            animation_speed: 'super',
-            show_total_votes_counter: false,
-            show_overall_rating: true});
-         })
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Compact View</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-	$(document).ready(function (){
-	$('#CompactView').opineo('results.php',
-    	    {curvalue:3, view: 'compact',
-    	    animation_speed: 'super'});
-	})
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Mini View</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#MiniView').opineo('results.php', {curvalue:0, view: 'mini', callback: myCallback});
-    })	
-&lt;/script&gt;</pre>
-      <h3 id="animation_style"> Animation Style</h3>
-      <ul>
-        <li>Slow</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', animation_speed:'slow'});
-    })	
-&lt;/script&gt; </pre>
-      <ul>
-        <li>Medium</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', animation_speed:'mild'});
-    })	
-&lt;/script&gt; </pre>
-      <ul>
-        <li>Fast</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', animation_speed:'fast'});
-    })	
- &lt;/script&gt;</pre>
-      <ul>
-        <li>Super Fast</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', animation_speed:'super'});
-    })	
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Ultra Fast</li>
-      </ul>
-      <pre class="prettyprint"> &lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', animation_speed:'ultra fast'});
-    })	
-&lt;/script&gt; </pre>
-      <h3 id="bars_text"> Bars Text</h3>
-      <ul>
-        <li>Show</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', votes_label:true});
-    })	
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Hide</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', votes_label:false});
-    })	
- &lt;/script&gt;</pre>
-      <h3 id="vote_counter"> Vote Counter</h3>
-      <ul>
-        <li>Show</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', show_votes_counter:true});
-    })	
-&lt;/script&gt; </pre>
-      <ul>
-        <li>Hide</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', votes_label:false});
-    })	
-&lt;/script&gt;</pre>
-      <h3 id="rating_icons"> Rating Icons</h3>
-      <ul>
-        <li>Colored</li>
-        <li>Grey</li>
-      </ul>
-      <h3 id="rating_titles"> Rating Titles</h3>
-      <ul>
-        <li>Text For First Star</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', star_1_text:'Hate It'});
-    })	
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Text For Second Star</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', star_2_text:'Don't Like It'});
-    })	
-&lt;/script&gt; </pre>
-      <ul>
-        <li>Text For Third Star</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', star_1_text:'Its OK'});
-    })	
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Text For Fourth Star</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', star_1_text:'Like It'});
-    })	
-&lt;/script&gt;</pre>
-      <ul>
-        <li>Text For Fifth Star</li>
-      </ul>
-      <pre class="prettyprint">&lt;script&gt;
-    $(document).ready(function (){
-    $('#opineo').opineo('results.php', {curvalue:0, view: 'mini', star_1_text:'Love It'});
-    })	
-&lt;/script&gt;</pre>
-      <h3 id="bar_colors"> Bar Colors</h3>
-      <ul>
-        <li>Colors of Red Bar</li>
-        <li>Colors of Yellow Bar</li>
-        <li>Colors of Green Bar</li>
-      </ul>
+      <h2> Код</h2>
+	  <h3 id="view_type"> Стандарты</h3>
+      <p> Каждый Битрикс-разработчик постоянно пишет php-код, но многие даже не задумываются о том, что их код попадет в руки другим разработчикам на поддержку или же коллегам для совместной работы. Да и зачастую разработчик сам через пару недель сломит ногу в собственном же коде. Поэтому необходимо придерживаться определенной концепции написания кода.</p>
+	  <p>В PHP никогда не было единого стандарта для написания кода. Те разработчики, которые используют различные кодовые базы, затрачивают лишнее время на выдумку собственных правил именований и стиля кодирования. Некоторые из них перенимают готовые стандарты, такие как PEAR или Zend Framework, другие же пишут как хотят.</p>
+	  <p>Стандартов много, но как же выбрать какой использовать?</p>
+	  <p>Возможно в вашей компании уже есть стандарт кода, которого должны придерживаться все программисты. Это хорошо. Если же нет или же вы работаете фрилансером, самое их ввсести.</p>
+
+	  
+	  <h3 id="bitrixst"> Стандарты Битрикс</h3>
+	<ul>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864" target="_blank">Форматирование кода</a>
+		<ul>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#str_long">Длина строки</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#str_rule">Правила переноса строки </a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#tab">Пробелы и табуляция</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#format_18">Форматирование подчиненности</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#bracket">Правила расстановки фигурных скобок</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#sign_question">Использование тернарного оператора "?:" </a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#expression">Выражения</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#if_else">Инструкции if, else, while и т.п. </a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#hard_expression">Сложные инструкции</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#array_format">Форматирование массивов </a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#empty_string">Пустые строки</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#space">Пробелы</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4864#other">Прочее </a></li>
+		</ul></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865">Соглашение об именовании</a></li>
+		<ul>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865#common">Общие понятия</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865#name_variable">Именование переменных</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865#name_method">Именование методов и функций </a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865#prefiks">Префиксы переменных</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865#name_classes">Именование классов</a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4865#name_const">Именование констант </a></li>
+		</ul>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=4877">Комментарии</a></li>
+
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=3227">Идиомы программирования</a>
+		<ul>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=3227#idiom_common">Общее понятие </a></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=3227#idiom_example">Примеры идиом</a></li>
+		</ul></li>
+		<li><a href="https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&amp;LESSON_ID=3228">SQL-запросы </a></li>
+	</ul>
+	  
+	      
+      <h3 id="psr"> PSR</h3>
+	  
+<h4>PSR-1: Основной Стандарт Кодирования.</h4>
+<p><a href="https://github.com/dotzero/fig-standards/blob/master/accepted/ru/PSR-1-basic-coding-standard.md">PSR-1</a> описывает основной стандарт кодирования. Он не детализирован. Для “обеспечения наилучшего технического взаимодействия между разделенными фрагментами PHP кода” был создан набор правил.</p>
+<ul>
+<li>Используются только теги  &lt;?php и &lt;?=</li>
+<li>Используется только  UTF-8 (никаких  BOM для PHP кода).</li>
+<li>Разделение выполнения задач по различным источникам (генерация выходных параметров, доступ к базе данных и др.)</li>
+<li>Соблюдаются стандарты PSR-0.</li>
+<li>Имена классов определяются в стиле CamelCase, начиная с заглавной буквы.</li>
+<li>Константы классов должны быть написаны в верхнем регистре с знаком подчёркивания в качестве разделителей слов.</li>
+<li>Методы классов определяются в стиле camelCase, начиная с прописной буквы.</li>
+</ul>
+<p>Основные правила описывают структуру файла и способы именования. Это гарантирует, что весь PHP код будет выглядеть просто и понятно. Только представьте себе приложение, использующее множество сторонних компонентов, и все они именованы различными способами и используют разные стили кодирования. Вот был бы ужас!</p>
+
+<h4>PSR-2: Стандарты Оформления Кода (Гид по Стилю Кодирования)</h4>
+<p><a href="https://github.com/dotzero/fig-standards/blob/master/accepted/ru/PSR-2-coding-style-guide.md">PSR-2</a> - это расширение стандартов PSR-1. Главная цель - создание общего стиля кодирования в PHP, что приведет к единому отформатированному коду.</p>
+<p>Правила оформления кода были введены после <a href="https://docs.google.com/spreadsheet/ccc?key=0AptAkq2qKI8adHBzQlZuVTlCSHVvQ2xJYUs3YWpqVVE#gid=0" target="_blank">обширного исследования</a>, проведенного членами группы FIG.</p>
+<p>Правила, согласованные с участниками группы PSR-2, не отражают предпочтения каждого PHP разработчика. Это и не требуется , так как ещё только при создании группы, сообщество PHP-FIG утверждало, что правила были созданы для себя, а всем желающим работать по этим правилам они будут только рады.</p>
+<p>Пример кода по PSR:</p>
+<pre class="prettyprint">
+namespace Vendor\Package;
+
+use FooInterface;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class Foo extends Bar implements FooInterface
+{
+    public function sampleFunction($a, $b = null)
+    {
+        if ($a === $b) {
+            bar();
+        } elseif ($a > $b) {
+            $foo->bar($arg1);
+        } else {
+            BazClass::bar($arg2, $arg3);
+        }
+    }
+
+    final public static function bar()
+    {
+        // тело метода
+    }
+}</pre>
+
+<p>В идеале каждый PHP-проект должен соответствовать стандартам PSR-1 и PSR-2. Однако, из-за того, что у каждого разработчика свой вкус (например, “правило именование Х лучше, чем У” или “вместо пробелов используется табуляция!”) и из-за других причин очень мало PHP-проектов пишутся согласно стандартам PSR-1 и PSR-2.</p>
+
+
     </div>
   </div>
 </section>
 <section class="vibrant centered">
   <div class="container">
-    <h4> This documentation template is provided free by eGrappler.com. Opineo is a feedback
-      collection widget and is available for free download <a href="http://www.greepit.com/Opineo/admin-form.html"> here</a></h4>
+    <h4> Эта документация собрана и написана, исходя из опыта группы разработчиков, занимающихся разработкой сайтов на 1С-Битрикс.</h4>
   </div>
 </section>
 <footer>
   <div class="container">
-    <p> &copy; 2014 EGrappler.com </p>
+    <p> &copy; 2014 <a href="mailto:rushfirst@gmail.com">rushfirst</a></p>
   </div>
 </footer>
 <script src="js/jquery.min.js"></script> 
